@@ -36,7 +36,7 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
         //Log.d("testing date:", String.valueOf(datePicker.getDayOfMonth()+"/"+datePicker.getMonth()+"/"+datePicker.getYear()));
         Date date = new Date(datePicker.getYear()-1900, datePicker.getMonth(), datePicker.getDayOfMonth(), 1, 1, 1);
         Bundle result = new Bundle();
-        result.putString("date", date.toString());
+        result.putSerializable("date", date);
         getParentFragmentManager().setFragmentResult("requestKey", result);
         Log.d("testing date:", date.toString());
 
